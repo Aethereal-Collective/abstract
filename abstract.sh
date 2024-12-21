@@ -125,7 +125,7 @@ verify_contracts() {
 
 menu() {
     echo -e "${CYAN}1) Install Dependencies${NORMAL}"
-    echo -e "${CYAN}2) Modify configuration & compile${NORMAL}"
+    echo -e "${CYAN}2) Update HardHat & Compile${NORMAL}"
     echo -e "${CYAN}3) Wallet setup${NORMAL}"
     echo -e "${CYAN}4) Deploy contract${NORMAL}"
     echo -e "${CYAN}5) Verify contracts${NORMAL}"
