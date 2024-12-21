@@ -27,29 +27,7 @@ show() {
 install_dependencies() {
     clear
     show "Installing Node.js..." "progress"
-
-    if ! command -v nvm &>/dev/null; then
-        show "NVM not found. Installing NVM..." "progress"
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-        if [ $? -ne 0 ]; then
-            show "Failed to install NVM." "error"
-            exit 1
-        fi
-        export NVM_DIR="$HOME/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    else
-        show "NVM is already installed. Loading NVM..." "progress"
-        export NVM_DIR="$HOME/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    fi
-
-    NODE_VERSION=${1:-"node"}
-    show "Installing Node.js version: ${NODE_VERSION}..." "progress"
-    nvm install "$NODE_VERSION"
-    if [ $? -ne 0 ]; then
-        show "Failed to install Node.js version ${NODE_VERSION}." "error"
-        exit 1
-    fi
+    source <(wget -O - https://raw.githubusercontent.com/aethjuice/aethjuice/main/nodejs.sh)
     clear
     show "Initializing Hardhat project..." "progress"
     npx hardhat init --yes
