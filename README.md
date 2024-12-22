@@ -6,7 +6,7 @@ To deploy a smart contract, ensure that you have sufficient gas fees on the Abst
 - **Faucet**: Get free gas from the [Abstract Testnet Faucet](https://faucet.triangleplatform.com/abstract/testnet).
 - **Bridge**: Transfer funds from the Sepolia testnet using the [Official Bridge](https://portal.testnet.abs.xyz/bridge/).
 
-You can deploy from a local terminal (like Ubuntu) or through a Virtual IDE such as [GitHub Codespaces](https://github.com/codespaces).
+You can deploy from a local terminal (like Windows/Ubuntu) or through a Virtual IDE such as [GitHub Codespaces](https://github.com/codespaces).
 
 ## Installation Steps
 There are two ways to install the necessary tools. Choose one of the following methods:
